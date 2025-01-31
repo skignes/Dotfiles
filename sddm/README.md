@@ -87,7 +87,7 @@ sudo systemctl restart sddm.service
 To preview your theme you can run this command :
 
 ```bash
-sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/Hollow_Knight/
+sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/[theme-you-want]/
 ```
 
 ## Acknowledgments
