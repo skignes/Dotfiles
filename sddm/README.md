@@ -1,3 +1,9 @@
+# Preview
+
+## Hollow Knight
+
+![Hollow Knight](Previews/Hollow_Knight.jpg)
+
 # Installation of SDDM Themes
 
 ## Prerequisites
@@ -74,6 +80,14 @@ If the file doesn't exist then create it. And put this inside :
 ```bash
 sudo reboot now
 sudo systemctl restart sddm.service
+```
+
+## Preview your theme
+
+To preview your theme you can run this command :
+
+```bash
+sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/Hollow_Knight/
 ```
 
 ## Acknowledgments
