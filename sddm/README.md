@@ -1,3 +1,6 @@
+![Static Badge](https://img.shields.io/badge/Works_On-My_Machine-blue)
+![Static Badge](https://img.shields.io/badge/Not_a_Bug-A_Feature-red)
+
 # Preview
 
 ## Hollow Knight
