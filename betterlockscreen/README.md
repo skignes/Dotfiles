@@ -5,7 +5,7 @@
 
 ## Some random Image
 
-![Random Image](Previews/betterlockscreen.jpg)
+![Random Image](../Previews/betterlockscreen.jpg)
 
 # Installation of BetterLockScreen
 

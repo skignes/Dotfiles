@@ -5,7 +5,7 @@
 
 ## Hollow Knight
 
-![Hollow Knight](Previews/Hollow_Knight.jpg)
+![Hollow Knight](../Previews/Hollow_Knight.jpg)
 
 # Installation of SDDM Themes
 
