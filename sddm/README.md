@@ -7,6 +7,10 @@
 
 ![Hollow Knight](../Previews/Hollow_Knight.jpg)
 
+## TTY
+
+![TTY](../Previews/TTY.jpg)
+
 # Installation of SDDM Themes
 
 ## Prerequisites
