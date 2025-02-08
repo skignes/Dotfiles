@@ -1,0 +1,13 @@
+[SddmGreeterTheme]
+Name=TTY
+Description=Custom TTY theme for SDDM
+Author=skignes
+Website=https://github.com/Dotfiles
+License=GPL-3.0-or-later
+Type=sddm-theme
+Version=1.0
+MainScript=Main.qml
+TranslationsDirectory=translations
+Theme-Id=tty-theme
+Theme-API=2.0
+QtVersion=5
