@@ -1,3 +1,8 @@
+// Config created by Skignes https://github.com/skignes/Dotfiles
+// Copyright (C) 2022-2025 Skignes
+// Based on https://github.com/Keyitdev/sddm-astronaut-theme
+// Distributed under the GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
+
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15

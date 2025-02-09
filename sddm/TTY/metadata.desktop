@@ -1,7 +1,7 @@
 [SddmGreeterTheme]
 Name=TTY
 Description=Custom TTY theme for SDDM
-Author=skignes
+Author=Skignes
 Website=https://github.com/Dotfiles
 License=GPL-3.0-or-later
 Type=sddm-theme

@@ -79,7 +79,7 @@ If the file doesn't exist then create it. And put this inside :
 
 ```conf
 [Theme]
-    Current=[theme-you-want]
+Current=[theme-you-want]
 ```
 
 ### Reboot or restart sddm
