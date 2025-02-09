@@ -9,7 +9,7 @@
 
 ## TTY
 
-[![Watch the video](https://raw.githubusercontent.com/skignes/Dotfiles/master/Previews/TTY_thumbnail.jpg)](https://github.com/skignes/Dotfiles/raw/master/Previews/TTY.mp4)
+https://github.com/user-attachments/assets/d211c4f3-ae45-4f78-8c0d-876fdf303d7f
 
 # Installation of SDDM Themes
 
