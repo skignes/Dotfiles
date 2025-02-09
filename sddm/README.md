@@ -9,6 +9,7 @@
 
 ## TTY
 
+[![TTY](https://raw.githubusercontent.com/skignes/Dotfiles/master/Previews/TTY_thumbnail.jpg)](https://raw.githubusercontent.com/skignes/Dotfiles/master/Previews/TTY.mp4)
 <video width="auto" height="auto" controls>
   <source src="../Previews/TTY.mp4" type="video/mp4">
   Your browser does not support the video tag.
