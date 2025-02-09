@@ -9,7 +9,10 @@
 
 ## TTY
 
-![TTY](../Previews/TTY.jpg)
+<video width="auto" height="auto" controls>
+  <source src="../Previews/TTY.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 # Installation of SDDM Themes
 
