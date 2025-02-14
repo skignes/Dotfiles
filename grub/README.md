@@ -15,7 +15,7 @@
 
 ## Prerequisites
 
-- Linux with `grub` on it/
+- Linux with `grub` on it.
 - `root` or `sudo` to install the themes.
 
 ## Install the Themes
@@ -32,13 +32,15 @@ cd Dotfiles/grub
 > [!WARNING]
 > There is 2 emplacement where you can set your theme. One of emplacement will not work if you have your disk encrypted.
 
-#### Disk not Encrypted
+> [!NOTE]
+> Disk not Encrypted
 
 ```bash
 sudo cp -r [THEME_YOU_WANT] /usr/share/grub/themes/
 ```
 
-#### Disk Encrypted
+> [!NOTE]
+> Disk Encrypted
 
 ```bash
 sudo cp -r [THEME_YOU_WANT] /boot/grub/themes/
@@ -50,8 +52,6 @@ sudo cp -r [THEME_YOU_WANT] /boot/grub/themes/
 sudo nvim /etc/default/grub
 ```
 
-#### Disk not Encrypted
-
 Change this line :
 
 ```bash
@@ -60,13 +60,15 @@ Change this line :
 
 into :
 
-#### Disk not Encrypted
+> [!NOTE]
+> Disk not Encrypted
 
 ```bash
 GRUB_THEME="/usr/share/grub/themes/[THEME_YOU_WANT]/theme.txt"
 ```
 
-#### Disk Encrypted
+> [!NOTE]
+> Disk Encrypted
 
 ```bash
 GRUB_THEME="/boot/grub/themes/[THEME_YOU_WANT]/theme.txt"
