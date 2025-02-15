@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Config created by Skignes https://github.com/skignes/Dotfiles
+# Copyright (C) 2022-2025 Skignes
+# Distributed under the GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
+
+# WARNING: Might not work correcly
+# Get the list of the WiFi available
+show_menu() {
+    nmcli -t -f SSID,SECURITY device wifi list | awk -F: '{print $1}' | grep -v '^$' | sort -u
+}
+
+while true; do
+    # Select your network
+    selected=$(show_menu | rofi -theme ~/.config/rofi/Network.rasi -dmenu -p "Select a Wi-Fi network:")
+
+    if [ -n "$selected" ]; then
+        # Check the security of the network
+        security=$(nmcli -t -f SECURITY device wifi list | grep "$selected" | cut -d':' -f2)
+
+        # Check if the connection is there
+        connection_exists=$(nmcli connection show --active | grep "$selected")
+
+        if [ -n "$connection_exists" ]; then
+            # Disconnect from network
+            nmcli device disconnect wlan0
+            break
+        else
+            if [[ "$security" != "none" ]]; then
+                # Check if the password is there
+                password_saved=$(nmcli connection show "$selected" | grep "802-11-wireless-security.psk")
+
+                if [ -n "$password_saved" ]; then
+                    # Connect
+                    nmcli device wifi connect "$selected"
+                    break
+                else
+                    # WARNING: Might not be secure
+                    # Prompt for password
+                    password=$(rofi -theme ~/.config/rofi/Network.rasi -dmenu -password -p "Enter password for $selected:")
+                    if [ -n "$password" ]; then
+                        nmcli device wifi connect "$selected" password "$password"
+                        notify-send "Connected to $selected"
+                        break
+                    fi
+                fi
+            else
+                # Connect
+                nmcli device wifi connect "$selected"
+                notify-send "Connected to $selected"
+                break
+            fi
+        fi
+    else
+        break
+    fi
+done
+
