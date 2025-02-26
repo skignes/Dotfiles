@@ -30,7 +30,7 @@ case $selected in
         systemctl reboot
         ;;
     "󰍁")
-        betterlockscreen -l
+        exec ~/.local/bin/ScreenLock
         ;;
     "")
         systemctl suspend
