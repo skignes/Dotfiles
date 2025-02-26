@@ -42,7 +42,7 @@ sudo cp conf/betterlockscreen /usr/bin
 
 ```bash
 # Just add the binary
-sudo cp Conf/betterlockscreen
+sudo cp conf/betterlockscreen
 ```
 
 If you can't execute it then maybe try :
@@ -58,7 +58,7 @@ Now you need to configure your **BetterLockScreen**.
 To add the same image as me, you need to execute this inside the repository, you need to do this :
 
 ```bash
-betterlockscreen -u Conf/landscape_fantasy.jpg
+betterlockscreen -u conf/landscape_fantasy.jpg
 ```
 
 Then you can use your configuration to replace `i3lock`.
