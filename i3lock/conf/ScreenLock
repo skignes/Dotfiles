@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Config created by Skignes https://github.com/skignes/Dotfiles
+# Copyright (C) 2025 Skignes
+# Distributed under the GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
+
 # Colors
 # ------
 bg=1a1b26

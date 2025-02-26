@@ -1,7 +1,7 @@
-// Config created by Keyitdev https://github.com/Keyitdev/sddm-astronaut-theme
-// Copyright (C) 2022-2025 Keyitdev
-// Based on https://github.com/MarianArlt/sddm-sugar-dark
+// Config created by Skignes https://github.com/skignes/Dotfiles
+// Copyright (C) 2025 Skignes
 // Distributed under the GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
+// Based on https://github.com/Keyitdev/sddm-astronaut-theme
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
