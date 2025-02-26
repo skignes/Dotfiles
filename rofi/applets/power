@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# Config created by Skignes https://github.com/skignes/Dotfiles
+# Copyright (C) 2025 Skignes
+# Distributed under the GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
+
+options=(
+    "󰍁"
+    ""
+    "󰗽"
+    "󰜉"
+    "󰐥"
+)
+
+rofi_cmd() {
+    rofi -dmenu                                 \
+        -p "Goodbye ${USER}"                    \
+        -no-click-to-exit                       \
+        -theme ~/.config/rofi/PowerMenu.rasi    \
+        -matching fuzzy
+}
+
+selected=$(printf "%s\n" "${options[@]}" | rofi_cmd)
+
+case $selected in
+    "󰐥")
+        systemctl poweroff
+        ;;
+    "󰜉")
+        systemctl reboot
+        ;;
+    "󰍁")
+        betterlockscreen -l
+        ;;
+    "")
+        systemctl suspend
+        ;;
+    "󰗽")
+        i3-msg exit
+        ;;
+esac
