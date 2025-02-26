@@ -47,6 +47,8 @@ You can copy the theme into the `/usr/bin/` or like i do put it inside the `~/.l
 cp conf/ScreenLock ~/.local/bin/ScreenLock
 ```
 
+You also need to change the image, but if you want the same as mine it is also in the conf directory !
+
 Like this you will have a binary you can execute !
 
 Now when you execute the script the **LockScreen** will appear :
