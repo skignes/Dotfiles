@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# Colors
+# ------
+bg=1a1b26
+fg=a9b1d6
+ring=15161e
+wrong=ff6c6b
+date=a9b1d6
+verify=98be65
+
+# Image
+# -----
+image="$HOME/Pictures/Lock2.png"
+
+help_me() {
+    echo "Usage: $0 [OPTION]"
+    echo "   Lock the screen with i3lock-color."
+    echo
+    echo "Options:"
+    echo "   -h, --help    Show this help message and exit"
+}
+
+lockscreen() {
+    i3lock -n -e --indicator --radius=30 --ring-width=60                    \
+        -i "$image" --scale                                                 \
+                                                                            \
+        --inside-color=$bg --ring-color=$ring                               \
+        --line-uses-inside                                                  \
+        --noinput-text=""                                                   \
+        --ind-pos="400:600"                                                 \
+        --refresh-rate=0                                                    \
+        --separator-color=$verify                                           \
+        --bshl-color=$verify                                                \
+        --keyhl-color=$verify                                               \
+                                                                            \
+        --insidever-color=$verify                                           \
+        --ringver-color=$verify                                             \
+        --verif-text="Verifying ..."                                        \
+        --verif-pos="400:525"                                               \
+        --verif-color=$verify                                               \
+        --verif-font="JetBrainsMono NF:style=Bold"                          \
+        --verif-size=20                                                     \
+                                                                            \
+        --insidewrong-color=$wrong                                          \
+        --ringwrong-color=$wrong                                            \
+        --wrong-text="Access Denied!"                                       \
+        --wrong-pos="400:525"                                               \
+        --wrong-color=$wrong                                                \
+        --wrong-font="JetBrainsMono NF:style=Bold"                          \
+        --wrong-size=20                                                     \
+                                                                            \
+        --force-clock                                                       \
+                                                                            \
+        --time-str="%H:%M" --time-size=150                                  \
+        --time-pos=400:400                                                  \
+        --time-font="JetBrainsMono NF:style=Bold"                           \
+                                                                            \
+        --date-str="%a, %d %b" --date-size=50                               \
+        --date-pos=400:460                                                  \
+        --date-font="JetBrainsMono NF"                                      \
+                                                                            \
+        --greeter-text="Type the password to Unlock"                        \
+        --greeter-pos=400:250                                               \
+        --greeter-color=$fg                                                 \
+        --greeter-font="JetBrainsMono NF:style=Bold"                        \
+        --greeter-size=25
+}
+
+
+case $1 in
+    -h|--help)
+        help_me
+        ;;
+    *)
+        lockscreen
+        ;;
+esac
