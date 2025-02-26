@@ -35,7 +35,7 @@ sudo pacman -S betterlockscreen
 
 # Change the Binary
 sudo rm /usr/bin/betterlockscreen
-sudo cp Conf/betterlockscreen
+sudo cp conf/betterlockscreen /usr/bin
 ```
 
 #### Debian Based
