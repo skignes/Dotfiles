@@ -183,7 +183,7 @@ lock() {
         --time-font="$font" \
         --time-size="$fontlg" \
         --date-str "%A %d %Y" \
-        --date-pos="ix-180:iy+20" \
+        --date-pos="ix-160:iy+20" \
         --date-color="$timecolor" \
         --date-font="$font" \
         --date-size="24" \
