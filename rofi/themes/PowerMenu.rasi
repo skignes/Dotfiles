@@ -21,7 +21,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       50%;
+    width:                       27%;
     x-offset:                    0px;
     y-offset:                    0px;
     
