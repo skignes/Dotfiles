@@ -1,0 +1,63 @@
+# Run as traditionnal UNIX daemon
+daemonize = true
+# Max ammount of clips in history
+max_history = 50
+# Path to the history file (tmp for reset at reboot)
+history_file_path = "/tmp/clipcatd-history"
+# File Path for the PID file
+pid_file = "/run/user/1000/clipcatd.pid"
+# How often it update the stored value
+primary_threshold_ms = 5000
+
+[log]
+# No file_path because i don't care of the log
+emit_journald = false
+emit_stdout = false
+emit_stderr = false
+level = "INFO"
+
+[watcher]
+# Enable clipcat to watch the clipboard
+enable_clipboard = true
+# Enable to watch the primary selection
+enable_primary = true
+# Enable to watch the secondary selection
+enable_secondary = false
+# Ignore clips that match any of the X11 `TARGETS`.
+sensitive_x11_atoms = ["x-kde-passwordManagerHint"]
+# Ignore the text clip that match the provided expression
+denied_text_regex_patterns = []
+# Ignore the text with a len less or equal to
+filter_text_min_length = 1
+# Ignore the text with a len greater or equal to
+filter_text_max_length = 20000000
+# Enable or disable capturing images
+capture_image = true
+# Ignore image clips with a size greater than
+filter_image_max_size = 5242880
+
+[grpc]
+# Enable gRPC over HTTP
+enable_http = false
+# Enable gRPC over Unix domain socket
+enable_local_socket = true
+# Host address for gRPC
+host = "127.0.0.1"
+# Port number for gRPC
+port = 45045
+# Path for the Unix domain socket
+local_socket = "/run/user/1000/clipcat/grpc.sock"
+
+[dbus]
+# Enable D-Bus
+enable = false
+
+[desktop_notification]
+# Enable desktop notifications
+enable = false
+# Icon in desktop notifications
+icon = "accessories-clipboard"
+# Timeout duration in milliseconds
+timeout_ms = 2000
+# Define the length of long plaintext
+long_plaintext_length = 2000

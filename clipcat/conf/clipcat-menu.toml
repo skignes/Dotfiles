@@ -1,0 +1,23 @@
+# The serveur to connect to
+server_endpoint = "/run/user/1000/clipcat/grpc.sock"
+# The default finder
+finder = "rofi"
+# The len of the preview
+preview_length = 80
+
+[rofi]
+# Length of line
+line_length = 100
+# Length of menu
+menu_length = 30
+# Prompt for the menu
+menu_prompt = "Clipboard"
+# Extra arguments to pass to rofi
+extra_arguments = ["-theme", "~/.config/rofi/Clipboard.rasi"]
+
+[log]
+# No file_path because i don't care of the log
+emit_journald = false
+emit_stdout = false
+emit_stderr = false
+level = "INFO"
