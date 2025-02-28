@@ -1,0 +1,134 @@
+// Config created by Skignes https://github.com/skignes/Dotfiles
+// Copyright (C) 2025 Skignes
+// Distributed under the GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
+
+configuration {
+    modi:                       "drun";
+    icon-theme:                 "Papirus-Dark";
+    application-fallback-icon:  "Adwaita";
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+    disable-history:            true;
+    sidebar-mode:               false;
+    hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+}
+
+@import "Color.rasi"
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       20%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    enabled:                     true;
+    border-radius:               10px;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:                     10px;
+    padding:                     10px 10px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "listview" ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     70px 50px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    background-image:            @input-bg-image;
+    orientation:                 horizontal;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    font:                        "FiraCode Nerd Font 12";
+    str:                         "";
+    padding:                     10px 15px;
+    border-radius:               8px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+entry {
+    enabled:                     true;
+    expand:                      true;
+    padding:                     10px 15px;
+    border-radius:               8px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           @foreground;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       5;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               true;
+    spacing:                     5px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    spacing:                     5px;
+    padding:                     10px;
+    border-radius:               8px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        24px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}

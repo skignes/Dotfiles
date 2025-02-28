@@ -1,0 +1,11 @@
+* {
+    font: "JetBrainsMono NF Bold 12";
+    background: #1e1e2e;
+    background-alt: #2e2e3e;
+    foreground: #c0caf5;
+    selected: #7aa2f7;
+    active: #9ece6a;
+    urgent: #f7768e;
+
+    input-bg-image: url("~/Pictures/test3.jpg");
+}

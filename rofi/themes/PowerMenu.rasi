@@ -1,4 +1,7 @@
-// # z0mbi3 - https://github.com/gh0stzk/dotfiles
+// Config created by Skignes https://github.com/skignes/Dotfiles
+// Copyright (C) 2025 Skignes
+// Distributed under the GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
+// Based on https://github.com/gh0stzk/dotfiles
 
 configuration {
 	hover-select:				true;
@@ -6,15 +9,7 @@ configuration {
 	me-accept-entry:			"MousePrimary";
 }
 
-* {
-    font: "JetBrainsMono NF Bold 12";
-    background: #2e2e2e;
-    background-alt: #2a2a2a;
-    foreground: #e0e0e0;
-    selected: #7aa2f7;
-    active: #9ece6a;
-    urgent: #f7768e;
-}
+@import "Color.rasi"
 
 window {
     transparency:                "real";
