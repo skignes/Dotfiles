@@ -1,0 +1,58 @@
+format = """
+$directory\
+$git_branch\
+$cmd_duration\
+$line_break\
+$character"""
+
+add_newline = false
+
+[username]
+style_user = "dimmed"
+style_root = "red"
+format = "[$user]($style)@"
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+style = "dimmed"
+
+[directory]
+style = "#7aa2f7"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+format = "[$branch]($style) "
+style = "dimmed"
+
+[character]
+success_symbol = "[❯](dimmed)"
+error_symbol = "[❯](#f7768e)"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "#9699a8"
+min_time = 2000
+
+[golang]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[package]
+disabled = true
+
+[rust]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[battery]
+disabled = true
