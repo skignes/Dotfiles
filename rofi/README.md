@@ -40,14 +40,14 @@ cd Dotfiles/rofi
 Get the rofi applets, and put theme inside the `~/.local/bin/` :
 
 ```bash
-cp themes/* ~/.local/bin/
+mkdir -p ~/.config/rofi
+cp themes/* ~/.config/rofi/
 ```
 
 For the themes, i will put theme inside `~/.config/rofi/`
 
 ```bash
-mkdir -p ~/.config/rofi
-cp applets/* ~/.config/rofi/
+cp applets/* ~/.local/bin
 ```
 
 Now you can add this to your i3 config for it to launcg with the keybind you want :
