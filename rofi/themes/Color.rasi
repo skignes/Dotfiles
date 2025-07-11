@@ -7,5 +7,5 @@
     active: #9ece6a;
     urgent: #f7768e;
 
-    input-bg-image: url("~/Pictures/test3.jpg");
+    input-bg-image: url("~/Pictures/wallpaper/launch.jpg");
 }
