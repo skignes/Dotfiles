@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Config created by Skignes https://github.com/skignes/Dotfiles
 # Copyright (C) 2025 Skignes
@@ -15,7 +15,7 @@ verify=98be65
 
 # Image
 # -----
-image="$HOME/Pictures/Lock2.png"
+image="$HOME/Pictures/wallpaper/lock.png"
 
 help_me() {
     echo "Usage: $0 [OPTION]"
