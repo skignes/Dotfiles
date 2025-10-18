@@ -10,8 +10,8 @@ local M = {
                 "rust_analyzer",
                 "ts_ls",
                 "cssls",
-                "hls",
-                "asm_lsp",
+                -- "hls",
+                -- "asm_lsp",
                 "html",
                 "vuels",
                 "yamlls",
@@ -19,6 +19,8 @@ local M = {
                 "ansiblels",
                 "clangd",
                 "lua_ls",
+                "prismals",
+                "tailwindcss",
             }
         })
     end

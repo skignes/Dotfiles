@@ -24,6 +24,8 @@ Spec "skignes.headers"
 Spec "skignes.lazygit"
 Spec "skignes.cloak"
 Spec "skignes.markdown-preview"
+Spec "skignes.nvim-colorizer"
+Spec "skignes.tailwind-tools"
 
 -- Nice comment highlights
 Spec "skignes.todocomments"

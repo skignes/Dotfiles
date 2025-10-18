@@ -1,22 +1,53 @@
+local colors_tokyonight_dark = {
+    bg = '#1a1b26',
+    fg = '#c0caf5',
+    yellow = '#e0af68',
+    cyan = '#7dcfff',
+    green = '#9ece6a',
+    orange = '#ff9e64',
+    violet = '#bb9af7',
+    magenta = '#ad8ee6',
+    blue = '#7aa2f7',
+    red = '#f7768e',
+    black = '#15161e',
+    white = '#a9b1d6',
+}
+
+local colors_tokyonight_moon = {
+    bg = '#222436',
+    fg = '#c8d3f5',
+    yellow = '#ff9e64',
+    cyan = '#7dcfff',
+    green = '#c3e88d',
+    orange = '#ff966c',
+    violet = '#c099ff',
+    magenta = '#ff007c',
+    blue = '#82aaff',
+    red = '#ff757f',
+    black = '#1b1d2b',
+    white = '#c8d3f5',
+}
+
+local colors_catppuccin_latte = {
+    bg = '#eff1f5',
+    fg = '#4c4a4e',
+    yellow = '#e6c84a',
+    cyan = '#89dceb',
+    green = '#a6e3a1',
+    orange = '#f5a97f',
+    violet = '#c6a0f6',
+    magenta = '#d5c4e0',
+    blue = '#7aa2f7',
+    red = '#f38ba8',
+    black = '#1e1e2e',
+    white = '#1e1e2e',
+}
+
 local M = {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-        -- Custom Tokyo Night colors
-        local colors = {
-            bg = '#1a1b26',
-            fg = '#c0caf5',
-            yellow = '#e0af68',
-            cyan = '#7dcfff',
-            green = '#9ece6a',
-            orange = '#ff9e64',
-            violet = '#bb9af7',
-            magenta = '#ad8ee6',
-            blue = '#7aa2f7',
-            red = '#f7768e',
-            black = '#15161e',
-            white = '#a9b1d6',
-        }
+        colors = colors_tokyonight_moon;
 
 		-- Tokyo Night Theme
         local tokyonight = {

@@ -21,7 +21,8 @@ local M = {
 			  "typescript",
 			  "css",
 			  "scss",
-			  "vue"
+			  "vue",
+              "prisma"
 		  },
           sync_install = false,
           highlight = { enable = true },

@@ -16,6 +16,9 @@ local M = {
         lspconfig.cssls.setup{}
         -- Haskell
         lspconfig.hls.setup{}
+        lspconfig.hls.setup{
+          cmd = { "/run/current-system/sw/bin/haskell-language-server-9.8.4", "--lsp" }
+        }
         -- Assembly
         lspconfig.asm_lsp.setup{}
         -- Html
@@ -28,6 +31,10 @@ local M = {
         lspconfig.jsonls.setup{}
         -- Ansible
         lspconfig.ansiblels.setup{}
+        -- Prisma
+        lspconfig.prismals.setup{}
+        -- Prisma
+        lspconfig.tailwindcss.setup{}
 
         -- C
         lspconfig.clangd.setup {
@@ -48,6 +55,9 @@ local M = {
             },
             workspace = {
                 library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = {
+                enable = false,  -- Disable telemetry if you prefer
             },
         },
         },}

@@ -14,3 +14,11 @@ vim.o.wrap = false
 -- Deactivate the mouse
 vim.opt.mouse = ""
 vim.opt.mousescroll = "ver:0,hor:0"
+
+-- Make MDX file markdown
+vim.cmd [[
+  augroup filetypedetect
+    autocmd!
+    autocmd BufRead,BufNewFile *.mdx set filetype=markdown
+  augroup END
+]]
