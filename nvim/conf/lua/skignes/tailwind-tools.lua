@@ -1,6 +1,10 @@
 local M = {
     "luckasRanarison/tailwind-tools.nvim",
-    opts = {},
+    opts = {
+        server = {
+            override = false,
+        },
+    },
 }
 
 return M

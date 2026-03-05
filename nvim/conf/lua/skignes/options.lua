@@ -22,3 +22,11 @@ vim.cmd [[
     autocmd BufRead,BufNewFile *.mdx set filetype=markdown
   augroup END
 ]]
+
+-- Make TF file terraform
+vim.cmd [[
+  augroup filetypedetect
+    autocmd!
+    autocmd BufRead,BufNewFile *.tf set filetype=terraform
+  augroup END
+]]

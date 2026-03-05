@@ -3,64 +3,68 @@ local M = {
 	opts = {},
     config = function()
         -- Setup language servers.
-        local lspconfig = require('lspconfig')
+        local lspconfig = vim.lsp
         -- Python
-        lspconfig.pylsp.setup{}
+        lspconfig.config('pylsp', {})
         -- Bash
-        lspconfig.bashls.setup {}
+        lspconfig.config('bashls', {})
         -- Rust
-        lspconfig.rust_analyzer.setup {}
+        lspconfig.config('rust_analyzer', {})
         -- Js && Typescript
-        lspconfig.ts_ls.setup {}
+        lspconfig.config('ts_ls', {})
         -- Css
-        lspconfig.cssls.setup{}
+        lspconfig.config('cssls', {})
         -- Haskell
-        lspconfig.hls.setup{}
-        lspconfig.hls.setup{
+        lspconfig.config('hls', {
           cmd = { "/run/current-system/sw/bin/haskell-language-server-9.8.4", "--lsp" }
-        }
+        })
         -- Assembly
-        lspconfig.asm_lsp.setup{}
+        lspconfig.config('asm_lsp', {})
         -- Html
-        lspconfig.html.setup{}
+        lspconfig.config('html', {})
         -- Vuejs
-        lspconfig.vuels.setup{}
+        lspconfig.config('vuels', {})
         -- Yaml
-        lspconfig.yamlls.setup{}
+        lspconfig.config('yamlls', {})
         -- Json
-        lspconfig.jsonls.setup{}
+        lspconfig.config('jsonls', {})
         -- Ansible
-        lspconfig.ansiblels.setup{}
+        lspconfig.config('ansiblels', {})
         -- Prisma
-        lspconfig.prismals.setup{}
-        -- Prisma
-        lspconfig.tailwindcss.setup{}
+        lspconfig.config('prismals', {})
+        -- Tailwindcss
+        lspconfig.enable('tailwindcss', {})
+        -- Docker
+        lspconfig.enable('docker_language_server', {})
+        -- Terraform
+        lspconfig.enable('terraform-ls', {})
 
         -- C
-        lspconfig.clangd.setup {
+        lspconfig.config('clangd', {
           cmd = { "clangd", "--background-index" }, -- Adjust the command as necessary
           filetypes = { "c", "cpp" }, -- Set the filetypes you want clangd to handle
-        }
+        })
 
         -- Lua
-        lspconfig.lua_ls.setup {
-        settings = {
-        Lua = {
-            runtime = {
-                version = 'LuaJIT',
-                path = vim.split(package.path, ';'),
+        lspconfig.config('lua_ls', {
+            settings = {
+                Lua = {
+                    runtime = {
+                        version = 'LuaJIT',
+                        path = vim.split(package.path, ';'),
+                    },
+                    diagnostics = {
+                        globals = { 'vim' }, -- Specify global variables
+                    },
+                    workspace = {
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                    telemetry = {
+                        enable = false,  -- Disable telemetry if you prefer
+                    },
+                },
             },
-            diagnostics = {
-                globals = { 'vim' }, -- Specify global variables
-            },
-            workspace = {
-                library = vim.api.nvim_get_runtime_file("", true),
-            },
-            telemetry = {
-                enable = false,  -- Disable telemetry if you prefer
-            },
-        },
-        },}
+        })
 
 
         -- Global mappings.

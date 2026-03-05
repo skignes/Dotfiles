@@ -21,6 +21,7 @@ local M = {
                 "lua_ls",
                 "prismals",
                 "tailwindcss",
+                "docker_language_server",
             }
         })
     end

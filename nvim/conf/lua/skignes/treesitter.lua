@@ -13,6 +13,7 @@ local M = {
 			  "python",
 			  "bash",
 			  "yaml",
+              "terraform",
 			  "json",
 			  "lua",
 			  "vim",
